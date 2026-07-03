@@ -2,7 +2,7 @@
 var hora = new Date().getHours();
 
 if (hora < 12) {
-  saudacao = "Bom dia";
+  saudacao = "Bom diaa";
 } else if (hora < 18) {
   saudacao = "Boa tarde";
 } else {
