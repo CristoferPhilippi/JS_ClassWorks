@@ -10,3 +10,10 @@ if (hora < 12) {
 }
 
 document.getElementById("mensagem").innerHTML = saudacao;
+
+//variável
+
+let altura = 1.8;
+let peso = 97;
+
+let resultado = peso / (altura * altura);
