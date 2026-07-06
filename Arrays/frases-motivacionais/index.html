@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Javascript -->
+    <script type="text/javascript">
+      
+      function gerarFraseMotivacional() {
+
+        
+     const frases = [
+      "Pois eu lhes digo que vocês não me verão desde agora, até que digam: Bendito é o que vem em nome do Senhor. (Mateus 23:39)" , 
+      "Que todas estas palavras que hoje lhe ordeno estejam em seu coração. Ensine-as com persistência a seus filhos. (Deuteronômio 6:6-7)",
+      "Tudo posso naquele que me fortalece. (Filipenses 4:13)", 
+      "O meu mandamento é este: amem uns aos outros como eu amo vocês. (João 15:12)",
+      "Porque sou eu que conheço os planos que tenho para vocês', diz o Senhor, 'planos de fazê-los prosperar e não de lhes causar dano, planos de dar-lhes esperança e um futuro.(Jeremias 29:11)" ,
+    "Se Cristo vos libertar, verdadeiramente sereis livres. (João 8:36)",
+    "A explicação das tuas palavras ilumina e dá discernimento aos inexperientes. (Salmos 119:130)" ,
+    "Portanto, visto que temos tal esperança, mostramos muita confiança. (2 Coríntios 3:12)",
+    "Ame o Senhor, o seu Deus, de todo o seu coração, de toda a sua alma, de todo o seu entendimento e de todas as suas forças. (Marcos 12:30)",
+    "Entregue ao Senhor tudo o que você faz, e os seus planos serão estabelecidos.(Provérbios 16:3)" 
+     ]
+
+     const numeroAleatorio = Math.floor(Math.random()* 10)
+     const frase = frases[numeroAleatorio]
+
+
+     document.getElementById('frase').innerHTML = frase
+      }
+
+
+
+
+    </script>
+
+
+    <title>A Palavra diária do Senhor</title>
+
+  </head>
+
+  <body>
+    
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="jumbotron">
+              <h1 class="text-success display-5">A Palavra diária do Senhor</h1>
+              <hr>
+
+              <h2 class="display-4" id="frase">
+                Deus é bom o tempo todo.
+              </h2>
+
+              <hr>
+              <button type="button" 
+              class="btn btn-success btn-lg" onclick="gerarFraseMotivacional()">Novo versículo</button>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+  </body>
+
+</html>
