@@ -1,25 +1,70 @@
-// function acao(entrada) {
-//    ...
-//  return resultado;
-//}
+/*
+//variável
 
-/* function desligarTorneira (){
-    console.log("levantar do sofá")
-  console.log("desligar torneira")
-  console.log("sentar no sofá")
+let altura = 1.80
+let peso = 97
+
+let resultado = peso / (altura * altura)
+
+// constante
+
+const pi = 3.14
+
+//tipos de variaveis
+
+//textos - string
+usando aspas '' "" exemplo: let nome = "Cristofer"
+
+//numero
+let numero = 1000 //inteiros
+let decimal = 1.1 //decimais
+let negativo = -10 //negativo
+
+ //booleanos
+let bollean = true ou false
+
+Operadores relacionais (true or false)
+== (igual a)
+!= diferente
+> maior que 
+< menor que 
+>= maior ou igual 
+<= menor ou igual 
+
+let resultado = 10 == 10
+console.log(resultado)
+
+Operadores lógicos (true e false)
+&& (e)
+|| (ou)
+
+let idade = 22
+let resultado = idade >= 18 && idade <= 40
+let idade = 24
+let totalcompra = 200
+let resultado = idade >= 40 || totalcompra <= 250
+console.log(resultado)
+
+let idade = 19
+if( idade >= 18 && idade <= 25){
+  console.log("Jovem adulto")
+} else { 
+  console.log("Menor de idade") 
+} */
+
+/*let opcao = 0
+
+if ( opcao == 1) {
+  console.log ("Saldo da conta")
+} else if (opcao == 2) {
+  console.log("Cartão de crédito")
+} else if (opcao == 3) {
+  console.log("Falar com atendente")
+} else {
+  console.log("opção inválida")
 }
 
-desligarTorneira() */
-
-/* function pedirCopoAgua () {
-
-    return "Copo Agua"
-}
-
-let retorno = pedirCopoAgua()
-console.log(retorno) */
-
-/* function irMercadoComprarArroz (dinheiro) {
+function irMercadoComprarArroz (dinheiro) {
     
   if  (dinheiro >= 10) {
     valor = "compra autorizada"
@@ -31,7 +76,7 @@ console.log(retorno) */
 }
 
 let retorno = irMercadoComprarArroz(10)
-console.log(retorno) */
+console.log(retorno)*/
 
 function calcularMedia(nota1, nota2) {
   let totalNotas = nota1 + nota2;
