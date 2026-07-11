@@ -147,7 +147,12 @@ console.log(nomes[0]);
  const numeroAleatorio = Math.floor(Math.random()* 10)  //10 seria o numero final de 0 a 10.
 
 //para inserir a informação no ID da HTML. 
+
 document.getElementById('ID_HTML').innerHTML = NOME_DA_VARIAVEL
+
+// para pegar uma informação de input
+
+let nomePesquisa = document.getElementById("campoNome").value;
 
 //concatenação
 
