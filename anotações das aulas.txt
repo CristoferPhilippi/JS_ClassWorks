@@ -194,3 +194,78 @@ let div = 2
 //salario = salario / div
 //ou
 //salario /= div
+
+
+
+
+// operadores unários
+
+let numero = 1
+
+// pré fixado
+//++numero
+//console.log (++numero)
+//++numero +2 // resultado 4
+
+//pós fixado
+//numero++
+//console.log (numero++)
+//numero
+numero++ +2 // resultado 3
+
+
+
+
+
+// var e let (escopo)
+
+//var e let no escopo é global 
+//var é global dentro ou fora de um bloco
+
+{  
+  var numero = 5
+  console.log(numero)
+}
+
+console.log(numero)
+
+// let de bloco
+{  
+  let numero = 10
+  console.log(numero) //pega numero do bloco
+}
+
+console.log(numero) //pegou numero global do var
+
+
+
+// + função literal
+
+function somar(a, b) {
+  console.log(a + b);
+}
+somar(1, 2);
+
+// + Função anônima (sem nome)
+
+const somar = function (a, b) {
+  console.log(a + b);
+};
+somar(1, 2);
+
+//+ Função arrow (seta)
+
+const somar = (a, b) => {
+  console.log(a + b);
+};
+somar(1, 2);
+
+//+Função arrow (retorno implícito)
+
+const somar = (a, b) => console.log(a + b);
+somar(1, 2);
+
+// ou
+const somar = (a, b) => a + b;
+let resultado = somar(1, 2);
+console.log(resultado);
