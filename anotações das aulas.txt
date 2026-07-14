@@ -345,3 +345,276 @@ class Hotel {
 const hotel = new Hotel();
 hotel.verificarDisponibilidade();
 
+
+//Reforço com o CHAT GPT pago
+
+
+//aula prática:
+Atividade prática 1 — Perfil do usuário
+
+Crie um arquivo chamado aula1.js.
+
+Declare:
+
+uma constante chamada nome;
+uma variável chamada idade;
+uma constante booleana chamada estudaProgramacao;
+uma constante chamada cidade.
+
+Mostre no console uma frase semelhante a:
+
+Cristofer tem 35 anos, mora em Tubarão e estuda programação: true.
+
+Use template string.
+
+// atividade 1=
+
+const nome = "Cristofer";
+let idade = 35;
+const estudaProgramacao = true;
+const cidade = "Tubarão";
+
+const mensagem = ` ${nome} tem ${idade} anos, mora em ${cidade} e estuda programação: ${estudaProgramacao}.  `
+
+console.log(mensagem)
+
+
+
+
+
+Atividade prática 2 — Calculadora de compra
+
+Crie estas variáveis:
+
+const precoProduto = 89.9;
+const quantidade = 3;
+const desconto = 20;
+
+Calcule:
+
+subtotal = preço × quantidade
+total = subtotal − desconto
+
+Mostre:
+
+Subtotal: R$ 269.7
+Desconto: R$ 20
+Total: R$ 249.7
+
+//Atividade 2 = 
+
+const precoProduto = 89.9;
+const quantidade = 3;
+const desconto = 20;
+
+const subTotal = precoProduto * quantidade;
+const total = subTotal - desconto;
+
+let valores = 
+    `Subtotal: R$ ${subTotal.toFixed(2)} 
+Desconto: R$ ${desconto}
+Total: R$ ${total.toFixed(2)}`
+
+console.log(valores)
+
+
+// observações: 
+Para mostrar no padrão brasileiro:
+
+const totalFormatado = total.toLocaleString("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+});
+
+console.log(totalFormatado);
+
+Resultado:
+
+R$ 249,70
+
+
+
+
+
+
+Atividade prática 3 — Análise de compra
+
+Crie:
+
+const saldo = 500;
+const valorProduto = 450;
+
+Utilize if e else.
+
+Quando o saldo for suficiente, mostre:
+
+Compra autorizada
+
+Caso contrário:
+
+Saldo insuficiente
+
+Depois altere valorProduto para 550 e observe a mudança.
+
+
+//atividade 3
+
+const saldo = 500;
+const valorProduto = 550;
+
+if (saldo >= valorProduto) {
+  console.log('Compra autorizada')
+} else {
+  console.log('Saldo insuficiente')
+}
+
+
+
+
+
+
+Atividade prática 4 — Sistema de acesso
+
+Crie:
+
+const idade = 20;
+const possuiIngresso = true;
+
+A pessoa somente poderá entrar quando:
+
+tiver pelo menos 18 anos;
+possuir ingresso.
+
+Use &&.
+
+Resultado esperado:
+
+Entrada autorizada
+
+ou:
+
+Entrada não autorizada
+
+//atividade 4
+
+const idade = 20;
+const possuiIngresso = true;
+
+const entrada = idade >= 18 && possuiIngresso === true
+
+if(entrada) {
+  console.log('Entrada autorizada')
+} else {
+   console.log('Entrada não autorizada')
+}
+
+
+
+
+
+
+
+Atividade prática 5 — Identifique o problema
+
+Observe:
+
+const numero1 = "10";
+const numero2 = "5";
+
+const resultado = numero1 + numero2;
+
+console.log(resultado);
+
+Responda:
+
+Qual resultado será mostrado?
+Por que isso acontece?
+Como fazer o resultado ser 15?
+
+//atividade 5
+
+const numero1 = Number("10");
+const numero2 = Number("5");
+
+const resultado = numero1 + numero2;
+
+console.log(resultado);
+
+//observações:
+Outra forma seria manter os valores originais e converter no cálculo:
+
+const numero1 = "10";
+const numero2 = "5";
+
+const resultado = Number(numero1) + Number(numero2);
+
+console.log(resultado);
+
+
+
+
+
+
+
+Desafio de fixação — IMC
+
+Seu material já possui o início desse cálculo:
+
+let altura = 1.8;
+let peso = 97;
+
+let resultado = peso / (altura * altura);
+
+Transforme-o em um programa completo:
+
+const peso = 97;
+const altura = 1.8;
+
+const imc = peso / (altura * altura);
+
+Depois classifique:
+
+IMC abaixo de 18,5  → Abaixo do peso
+IMC abaixo de 25    → Peso normal
+IMC abaixo de 30    → Sobrepeso
+IMC igual ou maior  → Obesidade
+
+Estrutura inicial:
+
+if (/* condição */) {
+  console.log("Abaixo do peso");
+} else if (/* condição */) {
+  console.log("Peso normal");
+} else if (/* condição */) {
+  console.log("Sobrepeso");
+} else {
+  console.log("Obesidade");
+}
+
+Mostre também uma frase usando template string:
+
+Seu IMC é 29.94 e a classificação é Sobrepeso.
+
+
+//atividade 6 - desafio IMC
+
+const peso = 81;
+const altura = 1.81;
+
+const imc = peso / (altura * altura);
+
+let classeIMC;
+
+if (imc < 18.5) {
+   classeIMC = 'Abaixo do peso';
+} else if (imc < 25) {
+    classeIMC = 'peso normal';
+} else if (imc < 30) {
+  classeIMC = 'Sobrepeso' 
+  } else {
+  classeIMC = 'Obesidade';
+}
+
+const mensagem = `Seu IMC é ${imc.toFixed(2)} e a classificação é ${classeIMC}`
+
+console.log(mensagem)
