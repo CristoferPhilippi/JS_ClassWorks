@@ -618,3 +618,371 @@ if (imc < 18.5) {
 const mensagem = `Seu IMC é ${imc.toFixed(2)} e a classificação é ${classeIMC}`
 
 console.log(mensagem)
+
+
+<==============================================================>
+
+
+// Aulas de funções by GPT
+
+Atividade prática 1 — Saudação personalizada
+
+Crie uma função chamada:
+
+apresentarUsuario
+
+Ela deve receber três parâmetros:
+
+nome
+idade
+cidade
+
+E deve mostrar:
+
+Olá, Cristofer! Você tem 35 anos e mora em Tubarão.
+
+Execute a função para pelo menos duas pessoas diferentes.
+
+Estrutura inicial:
+
+function apresentarUsuario(/* parâmetros */) {
+  // código
+}
+
+apresentarUsuario(/* argumentos */);
+
+
+//Resultado atividade 1
+
+function apresentarUsuario(nome,idade,cidade) {
+
+ console.log(`Olá, ${nome}! Você tem ${idade} anos e mora em ${cidade}.`)  
+}
+
+apresentarUsuario('Cristofer',35,'Braço do Norte')
+apresentarUsuario('Luana',29,'Braço do Norte')
+apresentarUsuario('Celina',1,'Braço do Norte')
+
+
+<==============================================================>
+
+
+Atividade prática 2 — Calculadora
+
+Crie quatro funções:
+
+somar
+subtrair
+multiplicar
+dividir
+
+Todas devem receber dois números e devolver o resultado com return.
+
+Exemplo de uso:
+
+const resultadoSoma = somar(10, 5);
+const resultadoSubtracao = subtrair(10, 5);
+const resultadoMultiplicacao = multiplicar(10, 5);
+const resultadoDivisao = dividir(10, 5);
+
+console.log(resultadoSoma);
+console.log(resultadoSubtracao);
+console.log(resultadoMultiplicacao);
+console.log(resultadoDivisao);
+
+Resultados esperados:
+
+15
+5
+50
+2
+
+
+//resultado atividade 2
+
+//soma
+function somar (valor1,valor2) {
+  const resultado = (valor1 + valor2);
+  return resultado;
+}
+const resultadoSoma = somar(10, 5);
+console.log(resultadoSoma)
+
+// subtração
+function subtrair (valor1,valor2) {
+  const resultado = (valor1 - valor2);
+  return resultado;
+}
+const resultadoSubtracao = subtrair(10, 5);
+console.log(resultadoSubtracao)
+
+
+// multiplicação
+function multiplicar (valor1,valor2) {
+  const resultado = (valor1 * valor2);
+  return resultado;
+}
+const resultadoMultiplicacao = multiplicar(10, 5);
+console.log(resultadoMultiplicacao);
+
+//divisão
+  function dividir (valor1,valor2) {
+  const resultado = (valor1 / valor2);
+    return resultado;
+}
+const resultadoDivisao = dividir(10,5);
+console.log(resultadoDivisao)
+
+<==============================================================>
+
+Atividade prática 3 — Compra com desconto
+
+Crie uma função chamada:
+
+calcularTotalCompra
+
+Ela deve receber:
+
+preco
+quantidade
+desconto
+
+Cálculo:
+
+subtotal = preço × quantidade
+total = subtotal − desconto
+
+A função deve devolver o total.
+
+Teste:
+
+const totalCompra = calcularTotalCompra(89.9, 3, 20);
+
+console.log(totalCompra.toFixed(2));
+
+Resultado esperado:
+
+249.70
+
+
+// resultado atividade 3
+
+function calcularTotalCompra(preco,quantidade,desconto) {
+  const subtotal = (preco * quantidade);
+  const total = (subtotal - desconto);
+  return total;
+  }
+const totalCompra = calcularTotalCompra(89.9, 3, 20);
+console.log(totalCompra.toFixed(2));
+
+
+
+
+<==============================================================>
+
+Atividade prática 4 — Verificação de acesso
+
+Crie uma função chamada:
+
+verificarAcesso
+
+Ela deve receber:
+
+idade
+possuiIngresso
+
+A função deve retornar:
+
+"Entrada autorizada"
+
+quando a pessoa tiver pelo menos 18 anos e possuir ingresso.
+
+Caso contrário, deve retornar:
+
+"Entrada não autorizada"
+
+Teste:
+
+console.log(verificarAcesso(20, true));
+console.log(verificarAcesso(17, true));
+console.log(verificarAcesso(25, false));
+
+Resultados:
+
+Entrada autorizada
+Entrada não autorizada
+Entrada não autorizada
+
+
+//resultado atividade 4
+
+
+function verificarAcesso(idade,possuiIngresso) {
+  
+   if (idade >= 18 && possuiIngresso === true){
+    return ("Entrada autorizada")
+  } else {
+    return ("Entrada não autorizada")
+  }
+}
+console.log(verificarAcesso(20, true));
+console.log(verificarAcesso(17, true));
+console.log(verificarAcesso(25, false));
+
+<==============================================================>
+Atividade prática 5 — Cálculo de média
+
+Crie uma função que receba três notas:
+
+calcularMedia(nota1, nota2, nota3)
+
+Ela deve devolver a média.
+
+Depois crie outra função:
+
+verificarSituacao(media)
+
+Regras:
+
+Média maior ou igual a 7 → Aprovado
+Média maior ou igual a 5 → Recuperação
+Média abaixo de 5        → Reprovado
+
+Uso esperado:
+
+const mediaAluno = calcularMedia(8, 7, 6);
+const situacaoAluno = verificarSituacao(mediaAluno);
+
+console.log(`Média: ${mediaAluno.toFixed(2)}`);
+console.log(`Situação: ${situacaoAluno}`);
+
+//resultado atividade 5
+
+function calcularMedia(nota1, nota2, nota3) {
+  const media = (nota1 + nota2 + nota3) / 3;
+  return media;
+  
+}
+const mediaAluno = calcularMedia(8, 7, 6);
+
+
+function verificarSituacao(media) {
+  
+  if (media >= 7) {
+    return ('Aprovado')
+  } else if (media >=5) {
+    return ('Recuperação')
+  } else {
+    return ('Reprovado')
+  }
+  
+}
+const situacaoAluno = verificarSituacao(mediaAluno);
+console.log(`Média: ${mediaAluno.toFixed(2)}`);
+console.log(`Situação: ${situacaoAluno}`);
+
+<==============================================================>
+
+Desafio — Sistema completo de IMC
+
+Crie duas funções.
+
+Primeira função
+calcularIMC(peso, altura)
+
+Ela deve devolver o resultado do cálculo.
+
+Segunda função
+classificarIMC(imc)
+
+Ela deve devolver uma das classificações:
+
+Abaixo do peso
+Peso normal
+Sobrepeso
+Obesidade
+
+Depois utilize:
+
+const imcUsuario = calcularIMC(97, 1.8);
+const classificacaoUsuario = classificarIMC(imcUsuario);
+
+const mensagem = `Seu IMC é ${imcUsuario.toFixed(2)} e a classificação é ${classificacaoUsuario}.`;
+
+console.log(mensagem);
+
+//resultado desafio imc
+ 
+function calcularIMC(peso, altura) {
+  const imc = peso / (altura * altura)
+  return imc;
+}
+const imcUsuario = calcularIMC(97, 1.8);
+
+
+
+function classificarIMC(imc) {
+  if (imc < 18.5) {
+   return ('Abaixo do peso');
+} else if (imc < 25) {
+    return ('peso normal');
+} else if (imc < 30) {
+  return ('Sobrepeso');
+  } else {
+  return ('Obesidade');
+}
+}
+
+const classificacaoUsuario = classificarIMC(imcUsuario);
+const mensagem = `Seu IMC é ${imcUsuario.toFixed(2)} e a classificação é ${classificacaoUsuario}.`;
+console.log(mensagem);
+
+<==============================================================>
+
+Desafio adicional — Evitar divisão por zero
+
+Em uma calculadora, dividir por zero não deve ser permitido.
+
+Crie:
+
+function dividir(numero1, numero2) {
+  // código
+}
+
+Quando numero2 for zero, retorne:
+
+Não é possível dividir por zero
+
+Caso contrário, devolva a divisão.
+
+Testes:
+
+console.log(dividir(10, 2));
+console.log(dividir(10, 0));
+
+Resultados:
+
+5
+Não é possível dividir por zero
+Resumo da aula
+Função    → bloco reutilizável de código
+Parâmetro → variável recebida pela função
+Argumento → valor enviado durante a execução
+return    → devolve um resultado
+console.log → apenas mostra um valor
+Escopo    → região em que uma variável existe
+
+
+//resultado desafio adicional
+
+function dividir(numero1, numero2) {
+  if (numero2 === 0) {
+    return "Não é possível dividir por zero";
+  } else {
+    const divisao = numero1 / numero2;
+    return divisao;
+  }
+}
+
+console.log(dividir(10, 2));
+console.log(dividir(10, 0));
