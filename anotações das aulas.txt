@@ -986,3 +986,262 @@ function dividir(numero1, numero2) {
 
 console.log(dividir(10, 2));
 console.log(dividir(10, 0));
+
+
+<==============================================================>
+
+// AULAS SOBRE array
+
+push()    → adiciona no final
+pop()     → remove do final
+unshift() → adiciona no começo
+shift()   → remove do começo
+delete nomes[0] - fica como "empty" o espaço.
+splice() — remover ou inserir em determinada posição // splice(indiceInicial, quantidadeParaRemover);
+includes() — verificar se um valor existe // array.includes("Luana");
+indexOf() — encontrar o índice
+
+<==============================================================>
+
+REPETIÇÕES
+
+// while
+//while significa “enquanto”.
+//Enquanto numero for menor ou igual a 5, execute o bloco.
+
+let numero = 1;
+
+while (numero <= 5) {
+  console.log(numero);
+
+  numero++;
+}
+
+Resultado:
+
+1
+2
+3
+4
+5
+
+Percorrendo um array com while
+const nomes = ["Cristofer", "Luana", "Celina"];
+
+let indice = 0;
+
+while (indice < nomes.length) {
+  console.log(nomes[indice]);
+
+  indice++;
+}
+
+<==============================================================>
+
+O do...while executa o código pelo menos uma vez.
+
+let numero = 1;
+
+do {
+  console.log(numero);
+
+  numero++;
+} while (numero <= 5);
+
+<==============================================================>
+
+//O for é muito utilizado quando sabemos como controlar a quantidade de repetições.
+
+for (inicialização; condição; atualização) {
+}
+
+//ex:
+
+for (let numero = 1; numero <= 5; numero++) {
+  console.log(numero);
+}
+
+//com arrays:
+const nomes = ["Cristofer", "Luana", "Celina"];
+
+for (let indice = 0; indice < nomes.length; indice++) {
+  console.log(nomes[indice]);
+}
+
+
+<==============================================================>
+
+for...of
+
+//Para percorrer diretamente os valores de um array, existe uma forma mais simples:
+
+const nomes = ["Cristofer", "Luana", "Celina"];
+
+for (const nome of nomes) {
+  console.log(nome);
+}
+
+//Resultado:
+
+Cristofer
+Luana
+Celina
+
+A leitura é: Para cada nome existente em nomes, execute o bloco.
+
+
+<============= Comparação entre as repetições ============>
+while
+
+Use quando a repetição depende de uma condição e você não sabe exatamente quantas vezes acontecerá.
+
+while (saldo > 0) {
+}
+do...while
+
+Use quando o bloco precisa executar pelo menos uma vez.
+
+do {
+} while (condicao);
+for
+
+Use quando existe um contador ou você precisa controlar o índice.
+
+for (let indice = 0; indice < nomes.length; indice++) {
+}
+for...of
+
+Use quando deseja percorrer diretamente os valores de um array.
+
+for (const nome of nomes) {
+}
+
+<======================== ATIVIDADES ======================================>
+
+Atividade prática 1 — Lista de nomes
+
+Crie:
+
+const nomes = ["Cristofer", "Luana", "Celina"];
+
+Depois:
+
+mostre o primeiro item;
+mostre o último item usando .length;
+adicione "Carlos" no final;
+adicione "Maria" no começo;
+mostre o array completo.
+
+Resultado final esperado:
+
+["Maria", "Cristofer", "Luana", "Celina", "Carlos"]
+
+
+//
+
+
+<======================== ATIVIDADE 2 ======================================>
+
+Atividade prática 2 — Remoção de itens
+
+Crie:
+
+const produtos = ["Notebook", "Mouse", "Teclado", "Monitor"];
+
+Faça:
+
+remova o último produto e guarde-o em uma variável;
+remova o primeiro produto e guarde-o em outra variável;
+mostre os produtos restantes;
+mostre os dois produtos removidos.
+
+Resultado esperado:
+
+Produtos restantes: ["Mouse", "Teclado"]
+Primeiro removido: Notebook
+Último removido: Monitor
+
+<======================== ATIVIDADE 3 ======================================>
+
+Atividade prática 3 — Pesquisa em array
+
+Crie:
+
+const usuarios = ["Cristofer", "Luana", "Celina", "Carlos"];
+
+Crie uma função:
+
+pesquisarUsuario(nome)
+
+A função deve retornar:
+
+Usuário encontrado
+
+ou:
+
+Usuário não encontrado
+
+Use:
+
+includes()
+
+Testes:
+
+console.log(pesquisarUsuario("Luana"));
+console.log(pesquisarUsuario("Maria"));
+
+<======================== ATIVIDADE 4 ======================================>
+
+Atividade prática 4 — Repetição com for
+
+Crie um array:
+
+const linguagens = ["HTML", "CSS", "JavaScript", "TypeScript"];
+
+Use um for tradicional e mostre:
+
+0 - HTML
+1 - CSS
+2 - JavaScript
+3 - TypeScript
+
+Você precisará usar:
+
+linguagens[indice]
+
+<======================== ATIVIDADE 5 ======================================>
+Atividade prática 5 — Repetição com for...of
+
+Crie:
+
+const valores = [10, 20, 30, 40];
+
+Use for...of para somar todos os valores.
+
+Resultado esperado:
+
+Total: 100
+
+<======================== ATIVIDADE 6 ======================================>
+
+Atividade prática 6 — Números pares
+
+Crie:
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+Crie um array vazio:
+
+const numerosPares = [];
+
+Percorra os números.
+
+Quando o número for par, adicione-o em numerosPares.
+
+Lembre-se:
+
+numero % 2 === 0
+
+Resultado esperado:
+
+[2, 4, 6, 8, 10]
