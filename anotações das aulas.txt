@@ -1139,6 +1139,14 @@ Resultado final esperado:
 
 //
 
+atividade 1 resultados: const nomes = ["Cristofer", "Luana", "Celina"];
+
+ //1 console.log(nomes[0]) 
+ //2 console.log(nomes[nomes.length - 1]); 
+ //3 nomes.push('Carlos') 
+ //4 nomes.unshift('Maria')
+ //5 console.log(nomes)
+
 
 <======================== ATIVIDADE 2 ======================================>
 
@@ -1160,6 +1168,17 @@ Resultado esperado:
 Produtos restantes: ["Mouse", "Teclado"]
 Primeiro removido: Notebook
 Último removido: Monitor
+
+// resultado
+
+const produtos = ["Notebook", "Mouse", "Teclado", "Monitor"];
+
+const ultimoRemovido = produtos.pop();
+const primeiroRemovido = produtos.shift();
+
+console.log(produtos)
+console.log(`Primeiro removido: ${primeiroRemovido}
+Último removido: ${ultimoRemovido}`)
 
 <======================== ATIVIDADE 3 ======================================>
 
@@ -1190,6 +1209,22 @@ Testes:
 console.log(pesquisarUsuario("Luana"));
 console.log(pesquisarUsuario("Maria"));
 
+
+// resposta 
+
+const usuarios = ["Cristofer", "Luana", "Celina", "Carlos"];
+
+function pesquisarUsuario(nome) {
+  if (usuarios.includes(nome)) {
+    return 'Usuário encontrado'
+  } else {
+     return 'Usuário não encontrado'
+   }
+}
+
+console.log(pesquisarUsuario("Luana"));
+console.log(pesquisarUsuario("Maria"));  
+
 <======================== ATIVIDADE 4 ======================================>
 
 Atividade prática 4 — Repetição com for
@@ -1209,6 +1244,18 @@ Você precisará usar:
 
 linguagens[indice]
 
+//resposta
+
+const linguagens = ["HTML", "CSS", "JavaScript", "TypeScript"];
+
+for (let indice = 0; indice < linguagens.length; indice++){
+ console.log(`${indice} - ${linguagens[indice]}`);
+}
+
+
+
+
+
 <======================== ATIVIDADE 5 ======================================>
 Atividade prática 5 — Repetição com for...of
 
@@ -1221,6 +1268,20 @@ Use for...of para somar todos os valores.
 Resultado esperado:
 
 Total: 100
+
+// resultado
+
+const valores = [10, 20, 30, 40];
+
+let soma = 0;
+
+for (const valor of valores) {
+
+    soma += valor;
+
+}
+
+console.log(`Total: ${soma}`);
 
 <======================== ATIVIDADE 6 ======================================>
 
@@ -1245,3 +1306,190 @@ numero % 2 === 0
 Resultado esperado:
 
 [2, 4, 6, 8, 10]
+
+//resposta
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numerosPares = [];
+
+for (const numero of numeros) {
+  if (numero % 2 === 0) {
+    numerosPares.push(numero)
+  }
+}
+
+console.log(numerosPares);
+
+<======================== DESAFIO  ======================================>
+Desafio 1 — Média de notas
+
+Crie uma função:
+
+calcularMedia(notas)
+
+Ela deve:
+
+receber um array de notas;
+somar todas as notas;
+dividir pela quantidade de notas;
+devolver a média.
+
+Teste:
+
+const notasAluno = [8, 7, 6, 9];
+
+const mediaAluno = calcularMedia(notasAluno);
+
+console.log(`Média: ${mediaAluno.toFixed(2)}`);
+
+Resultado:
+
+Média: 7.50
+
+
+//resposta
+
+function calcularMedia(notas) {
+  
+let soma = 0;
+  
+  for (const nota of notas) {
+    soma += nota;
+       
+  }
+  const media = soma / notas.length;
+  return media;
+    
+}
+const notasAluno = [8, 7, 6, 9];
+
+const mediaAluno = calcularMedia(notasAluno);
+
+
+console.log(`Média: ${mediaAluno.toFixed(2)}`);
+
+
+<======================== DESAFIO  ======================================>
+Desafio 2 — Maior e menor valor
+
+Crie:
+
+const valores = [15, 8, 42, 4, 23, 16];
+
+Descubra:
+
+o maior número;
+o menor número.
+
+Não use Math.max() nem Math.min().
+
+Use repetição e condições.
+
+Resultado esperado:
+
+Maior valor: 42
+Menor valor: 4
+
+//resposta
+
+const valores = [15, 8, 42, 4, 23, 16];
+
+let maior = valores[0];
+let menor = valores[0];
+
+for (const valor of valores) {
+if (valor > maior) {
+  maior = valor;
+}
+  if (valor < menor) {
+  menor = valor;
+  
+}
+
+   
+}
+console.log(`Maior valor: ${maior}
+Menor valor: ${menor}`)
+
+
+
+<======================== DESAFIO  ======================================>
+Desafio 3 — Cadastro simples
+
+Crie um array vazio:
+
+const usuarios = [];
+
+Crie uma função:
+
+cadastrarUsuario(nome)
+
+A função deve:
+
+verificar se o nome está vazio;
+verificar se o usuário já existe;
+adicionar o nome quando ele for válido.
+
+Retornos possíveis:
+
+Nome inválido
+Usuário já cadastrado
+Usuário cadastrado com sucesso
+
+Exemplo:
+
+console.log(cadastrarUsuario("Cristofer"));
+console.log(cadastrarUsuario("Luana"));
+console.log(cadastrarUsuario("Cristofer"));
+console.log(cadastrarUsuario(""));
+
+console.log(usuarios);
+
+Resultado aproximado:
+
+Usuário cadastrado com sucesso
+Usuário cadastrado com sucesso
+Usuário já cadastrado
+Nome inválido
+["Cristofer", "Luana"]
+Estrutura inicial
+const usuarios = [];
+
+function cadastrarUsuario(nome) {
+  if (/* verificar nome vazio */) {
+    return "Nome inválido";
+  }
+
+  if (/* verificar se já existe */) {
+    return "Usuário já cadastrado";
+  }
+
+  // adicionar usuário
+
+  return "Usuário cadastrado com sucesso";
+}
+
+//resposta
+
+const usuarios = [];
+
+function cadastrarUsuario(nome) {
+  if (nome === '') {
+    return "Nome inválido";
+  }
+
+  if (usuarios.includes(nome)) {
+    return "Usuário já cadastrado";
+  }
+
+  usuarios.push(nome);
+
+  return "Usuário cadastrado com sucesso";
+}
+
+console.log(cadastrarUsuario("Cristofer"));
+console.log(cadastrarUsuario("Luana"));
+console.log(cadastrarUsuario("Cristofer"));
+console.log(cadastrarUsuario(""));
+
+<======================== DESAFIO  ======================================>
