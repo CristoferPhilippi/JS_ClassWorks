@@ -1492,4 +1492,45 @@ console.log(cadastrarUsuario("Luana"));
 console.log(cadastrarUsuario("Cristofer"));
 console.log(cadastrarUsuario(""));
 
-<======================== DESAFIO  ======================================>
+<======================== CLAUDINHO ASSUMINDO AS AULAS  ======================================>
+
+Aula de objeto
+
+const usuario = {
+  nome: "Luana",
+  idade: 29,
+  cidade: "Braço do Norte"
+}
+console.log(`Nome: ${usuario.nome}
+Idade: ${usuario.idade}
+Cidade: ${usuario.cidade}`)
+
+// segunda atividade
+
+const usuario = {
+  nome: "Luana",
+  idade: 29,
+  cidade: "Braço do Norte",
+  apresentar: function() {
+    console.log(`Olá, meu nome é ${this.nome}, tenho ${this.idade} anos e moro em ${this.cidade}.`)
+  }
+};
+
+usuario.apresentar();
+
+// terceira atividade
+
+const hotel = {
+  quartos: 50,
+  ocupados: 30,
+  verificarDisponibilidade: function(){
+  const disponiveis = this.quartos - this.ocupados;
+  console.log(`Quartos disponíveis: ${disponiveis}`)
+  }
+}
+hotel.verificarDisponibilidade();
+
+hotel.ocupados = 40;
+
+hotel.verificarDisponibilidade();
+
