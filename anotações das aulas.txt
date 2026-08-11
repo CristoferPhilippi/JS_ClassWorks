@@ -1563,3 +1563,23 @@ conta.sacar(2000);
 conta.sacar(300);
 conta.consultarSaldo();
 
+
+
+///////////////////// UDEMY CLASS 170//////////////
+
+class Hotel {
+  constructor() {
+    this.quartos = 20;
+    this.ocupados = 10;
+  }
+
+  verificarDisponibilidade() {
+    let res = this.quartos - this.ocupados;
+    return "Disponível:" + res;
+  }
+}
+
+const hotel = new Hotel();
+hotel.verificarDisponibilidade();
+
+
