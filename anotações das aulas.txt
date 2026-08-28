@@ -1621,3 +1621,99 @@ contarLetras(produto)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+const produto1 = {
+  nome: "Notebook",
+  preco: 1200,
+};
+
+const produtoFactory = function (nome, preco) {
+  // < - código de  dados de API
+
+  return {
+    nome,
+    preco,
+    recuperarAvaliacoes() {
+      console.log(`avaliações para ${this.nome} com valor de ${this.preco}`);
+    },
+  };
+};
+
+const produto = produtoFactory("Notebook", 1200);
+produto.recuperarAvaliacoes();
+
+
+/////////////////// protótipo / prototype /////////////////////////
+
+
+
+
+Object.prototype
+
+const obj = {
+  
+}
+
+//console.log(obj.__proto__ == Object.prototype)
+
+
+class Carro {
+  constructor(){
+    this.placa = "AMP-1230"
+  }
+}
+
+
+class Bmw extends Carro {
+  constructor(){
+    super()
+    this.nome = "BMW 320i"
+  }
+}
+
+const objBmw = new Bmw()
+//console.log(objBmw.placa)
+//console.log(objBmw.nome)
+
+const veiculo = {
+  motor: "120 cavalos"
+}
+
+const carro = {
+  placa: "ASD-1234",
+  __proto__: veiculo,
+  acelerar: function(){
+  console.log("acelerando")
+   
+  }
+}
+
+const bmw = {
+  nome: "BMW 220i",
+  __proto__: carro
+}
+
+
+
+console.log(bmw.nome)
+console.log(bmw.placa)
+bmw.acelerar()
+bmw.motor
+
+/////////////////////////////////// retorno de funções //////////////
+
+function somar(numero1, numero2) {
+  numero1 = isNaN(numero1) ? 0 : numero1
+   numero2 = isNaN(numero2) ? 0 : numero2
+  return numero1 + numero2
+}
+somar ('andre',2)
+
+// outro modo, porém esse concatena
+
+function somar2(numero1=0, numero2=0) {
+   return numero1 + numero2
+}
+somar2 ('andre',3)
+somar2 (1)
+
+
