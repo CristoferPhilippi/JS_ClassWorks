@@ -28,3 +28,36 @@ console.log(texto);
 //inverso
 let arrayTexto = texto.split(",");
 console.log(arrayTexto);
+
+//
+
+const produtosDolar = [
+  { produto: "Notebook", preco: 1200, moeda: "$" },
+  { produto: "Celular", preco: 800, moeda: "$" },
+];
+
+const novo = produtosDolar.map(function (item) {
+  let preco = item.preco * 3;
+  return { produto: item, preco: preco, moeda: "R$" };
+});
+
+console.log(novo);
+
+//////////////////////////////// FILTER /////////////////////
+const usuarios2 = [
+  { nome: "Cristofer", idade: 35 },
+  { nome: "Luana", idade: 30 },
+  { nome: "Celina", idade: 1 },
+];
+
+const funcao = function (item, i, arr) {
+  console.log(this);
+  return item.idade >= this.filtro;
+};
+const filtro = {
+  filtro: 18,
+};
+
+const usuariosMaiorIdade = usuarios2.filter(funcao, filtro);
+
+console.log(usuariosMaiorIdade);
