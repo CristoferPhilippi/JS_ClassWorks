@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <title>Selecionando elementos</title>
+  </head>
+  <body>
+    <div id="destaque">Área de conteúdo</div>
+    <h1 class="vermelho">Título do site</h1>
+    <p>Subtítulo</p>
+
+    <ul>
+      <li class="primeiro">item 1</li>
+      <li>item 2</li>
+    </ul>
+
+    <button onclick="executar()">Clique aqui</button>
+
+    <script type="text/javascript">
+      function executar() {
+        //const obj = document.getElementById("destaque");
+        const obj = document.querySelector("li.primeiro");
+        obj.innerHTML = "teste";
+        obj.classList.add("destaque");
+      }
+      // console.log(obj.textContent);
+    </script>
+  </body>
+</html>

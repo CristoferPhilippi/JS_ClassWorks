@@ -43,6 +43,12 @@ const novo = produtosDolar.map(function (item) {
 
 console.log(novo);
 
+/////////////////////////////////////
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((n) => n * 2);
+console.log("Doubled numbers:", doubled);
+
 //////////////////////////////// FILTER /////////////////////
 const usuarios2 = [
   { nome: "Cristofer", idade: 35 },
