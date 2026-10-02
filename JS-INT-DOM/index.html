@@ -10,7 +10,7 @@
     <div id="destaque">Área de conteúdo</div>
     <h1 class="vermelho">Título do site</h1>
     <p>Subtítulo</p>
-
+    <div>Área de conteúdo 2</div>
     <ul>
       <li class="primeiro">item 1</li>
       <li>item 2</li>
@@ -26,6 +26,12 @@
         obj.classList.add("destaque");
       }
       // console.log(obj.textContent);
+
+      const obj = document.getElementsByTagName("div"); //esse serve para pegar pela tag html da página toda.
+      for (let i = 0; i < obj.length; i++) {
+        console.log(obj[i].textContent);
+      }
+      //console.log(obj[1]);
     </script>
   </body>
 </html>
